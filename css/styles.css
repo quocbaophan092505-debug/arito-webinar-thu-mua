@@ -130,19 +130,22 @@ button, input { font: inherit; }
 .agenda-card li { display: grid; grid-template-columns: minmax(110px, .48fr) 1fr; gap: 15px; padding: 13px 0; border-top: 1px solid rgba(255,255,255,.12); color: #bdcbe2; font-size: 11px; line-height: 1.6; }
 .agenda-card li span { color: #fff; font-weight: 700; }
 
-.speaker-layout { display: grid; grid-template-columns: minmax(280px, .82fr) minmax(0, 1.18fr); gap: clamp(45px, 8vw, 108px); align-items: center; }
-.speaker-visual { position: relative; max-width: 440px; width: 100%; min-height: 470px; }
-.speaker-visual::before { position: absolute; inset: 5px 48px 31px 12px; border: 1px solid #b6d5ff; border-radius: 200px 200px 20px 20px; background: linear-gradient(155deg, #cce4ff, #edf7ff 48%, #a9cfff); content: ''; }
-.speaker-portrait { position: absolute; inset: 0 38px 24px 0; width: calc(100% - 38px); height: calc(100% - 24px); border: 7px solid #fff; border-radius: 200px 200px 20px 20px; object-fit: cover; object-position: center 27%; background: #fff; box-shadow: 0 20px 48px rgba(13,58,130,.14); }
-.speaker-years { position: absolute; right: 0; bottom: 0; display: flex; width: 164px; min-height: 94px; align-items: center; justify-content: center; gap: 11px; border: 6px solid #fff; border-radius: 15px; color: var(--navy); background: var(--accent); }
-.speaker-years strong { font-size: 31px; font-weight: 800; letter-spacing: -.08em; }
-.speaker-years span { font-size: 8px; font-weight: 800; line-height: 1.5; text-transform: uppercase; }
-.speaker-copy h2 { max-width: 600px; font-size: clamp(31px, 4vw, 45px); }
-.speaker-name { margin: 25px 0 5px; color: var(--navy); font-size: 17px; font-weight: 800; }
-.speaker-role { margin: 0; color: var(--blue); font-size: 11px; font-weight: 700; line-height: 1.6; }
+.speaker-layout { display: grid; grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr); gap: clamp(35px, 6vw, 75px); align-items: center; max-width: 1160px; padding: clamp(28px, 5vw, 58px); border: 1px solid rgba(83,223,242,.4); border-radius: 26px; color: #fff; background: radial-gradient(ellipse at 90% 10%, rgba(24,133,255,.4), transparent 42%), linear-gradient(130deg, #05276f, #0755c5); box-shadow: 0 24px 70px rgba(7,45,117,.18); }
+.speaker-visual { position: relative; max-width: 390px; width: 100%; aspect-ratio: .88; min-height: 0; }
+.speaker-visual::before { position: absolute; inset: 12px 20px 15px 12px; border: 1px solid rgba(83,223,242,.78); border-radius: 22px; background: linear-gradient(155deg, rgba(83,223,242,.23), rgba(255,255,255,.06) 48%, rgba(7,24,74,.35)); content: ''; }
+.speaker-portrait { position: absolute; inset: 0 30px 24px 0; width: calc(100% - 30px); height: calc(100% - 24px); border: 5px solid rgba(255,255,255,.92); border-radius: 20px; object-fit: cover; object-position: center 27%; background: #fff; box-shadow: 0 20px 48px rgba(0,8,38,.28); }
+.speaker-years { position: absolute; right: 0; bottom: 0; display: flex; width: 176px; min-height: 92px; align-items: center; justify-content: center; gap: 11px; border: 5px solid #0a4aa8; border-radius: 15px; color: var(--navy); background: var(--accent); box-shadow: 0 12px 28px rgba(0,14,54,.22); }
+.speaker-years strong { font-size: 34px; font-weight: 800; letter-spacing: -.08em; }
+.speaker-years span { font-size: 10px; font-weight: 800; line-height: 1.5; text-transform: uppercase; }
+.speaker-copy h2 { max-width: 620px; color: #fff; font-size: clamp(32px, 4vw, 46px); }
+.speaker-copy > .eyebrow { color: var(--cyan); }
+.speaker-name { margin: 24px 0 6px; color: #fff; font-size: 23px; font-weight: 800; }
+.speaker-role { margin: 0; color: #65e3f2; font-size: 15px; font-weight: 700; line-height: 1.65; }
 .speaker-highlights { display: grid; gap: 13px; margin: 24px 0 28px; padding: 0; list-style: none; }
-.speaker-highlights li { position: relative; padding-left: 20px; color: #59677d; font-size: 11px; line-height: 1.8; }
-.speaker-highlights li::before { position: absolute; top: 8px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); content: ''; }
+.speaker-highlights li { position: relative; padding-left: 21px; color: #e2edff; font-size: 15px; line-height: 1.75; }
+.speaker-highlights li::before { position: absolute; top: .7em; left: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 4px rgba(53,217,239,.13); content: ''; }
+.speaker-copy .button--outline { color: #fff; border-color: rgba(255,255,255,.64); }
+.speaker-copy .button--outline:hover { color: var(--navy); background: #fff; }
 
 .section--organizer { padding-block: 64px; color: #fff; background: linear-gradient(110deg, #063b9d, #041b52); }
 .organizer-inner { display: grid; grid-template-columns: 170px minmax(0, 1fr) 110px; gap: 40px; align-items: center; }
@@ -167,22 +170,23 @@ button, input { font: inherit; }
 .form-heading h3 { margin: 9px 0 0; color: var(--navy); font-size: 23px; font-weight: 700; letter-spacing: -.035em; }
 .form-heading p { margin: 8px 0 23px; color: #78849a; font-size: 10px; }
 .form-heading p span, .field label > span:not(.optional) { color: #dc4f55; }
-.registration-countdown { margin: 0 0 23px; padding: 15px 16px 12px; border: 1px solid #d8e5f7; border-radius: 11px; background: #f2f7ff; }
-.registration-countdown-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #526684; font-size: 9px; font-weight: 700; }
-.registration-countdown-heading span:first-child { color: var(--navy); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
+.registration-countdown { margin: 28px 0 0; padding: 17px 18px 14px; border: 1px solid rgba(83,223,242,.45); border-radius: 13px; background: rgba(3,25,77,.48); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
+.registration-countdown-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #c2d7f7; font-size: 12px; font-weight: 700; }
+.registration-countdown-heading span:first-child { color: #66e5f3; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
 .registration-countdown-values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 11px; }
-.registration-countdown-values > div { display: flex; min-height: 54px; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 1px solid #d9e5f6; border-radius: 7px; background: #fff; }
-.registration-countdown-values strong { color: var(--navy); font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.04em; line-height: 1; }
-.registration-countdown-values span { color: #71819a; font-size: 8px; font-weight: 700; text-transform: uppercase; }
-.registration-countdown > p { margin: 9px 0 0; color: #7c8ba2; font-size: 8px; }
+.registration-countdown-values > div { display: flex; min-height: 62px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; background: rgba(255,255,255,.09); }
+.registration-countdown-values strong { color: #fff; font-size: 24px; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.04em; line-height: 1; }
+.registration-countdown-values span { color: #c6e7fa; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+.registration-countdown > p { margin: 10px 0 0; color: #a9c3e8; font-size: 11px; }
 .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 13px; }
 .field { min-width: 0; }
 .field--full { grid-column: 1 / -1; }
 .field label { display: block; margin-bottom: 7px; color: #33425b; font-size: 10px; font-weight: 700; }
 .field label .optional { margin-left: 5px; color: #8994a7; font-size: 9px; font-weight: 500; }
-.field input { width: 100%; min-height: 45px; padding: 0 13px; border: 1px solid #dce4f0; border-radius: 7px; color: var(--ink); background: #fbfcfe; font-size: 11px; transition: border-color .18s ease, box-shadow .18s ease; }
+.field input, .field select { width: 100%; min-height: 50px; padding: 0 13px; border: 1px solid #dce4f0; border-radius: 7px; color: var(--ink); background-color: #fbfcfe; font-size: 14px; transition: border-color .18s ease, box-shadow .18s ease; }
+.field select { padding-right: 38px; }
 .field input::placeholder { color: #a7b0bf; }
-.field input:focus { border-color: #5b91ed; outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.11); }
+.field input:focus, .field select:focus { border-color: #5b91ed; outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.11); }
 .field input[aria-invalid="true"] { border-color: #cf4453; background: #fffafb; }
 .consent-row { position: relative; display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; margin-top: 18px; color: #5d6a7e; font-size: 10px; line-height: 1.7; cursor: pointer; }
 .consent-row input { position: absolute; top: 2px; left: 1px; z-index: 1; width: 16px; height: 16px; margin: 0; opacity: 0; cursor: pointer; }
@@ -254,13 +258,13 @@ button, input { font: inherit; }
   .agenda-card { min-height: 0; padding: 24px 21px; }
   .agenda-card h3 { margin: 19px 0; font-size: 18px; }
   .agenda-card li { grid-template-columns: minmax(100px, .46fr) 1fr; font-size: 10px; }
-  .speaker-layout { grid-template-columns: 1fr; gap: 34px; }
-  .speaker-visual { max-width: 420px; min-height: min(108vw, 450px); margin-inline: auto; }
+  .speaker-layout { grid-template-columns: 1fr; gap: 30px; padding: 25px 20px; border-radius: 20px; }
+  .speaker-visual { max-width: 360px; min-height: 0; aspect-ratio: .88; margin-inline: auto; }
   .speaker-portrait { right: 27px; width: calc(100% - 27px); }
-  .speaker-years { width: 150px; min-height: 82px; }
+  .speaker-years { width: 158px; min-height: 82px; }
   .speaker-copy h2 { font-size: clamp(30px, 7.3vw, 40px); }
   .speaker-highlights { gap: 11px; }
-  .speaker-highlights li { font-size: 10px; }
+  .speaker-highlights li { font-size: 14px; }
   .section--organizer { padding-block: 48px; }
   .organizer-inner { grid-template-columns: 1fr; gap: 23px; }
   .organizer-mark { width: 145px; min-height: 74px; }
@@ -270,7 +274,7 @@ button, input { font: inherit; }
   .registration-layout { grid-template-columns: 1fr; gap: 30px; }
   .registration-copy { padding-top: 0; }
   .registration-copy h2 { font-size: clamp(34px, 8vw, 46px); }
-  .registration-copy > p:not(.eyebrow) { font-size: 12px; }
+  .registration-copy > p:not(.eyebrow) { font-size: 14px; }
   .registration-details { gap: 13px; margin-top: 23px; }
   .form-card { padding: 24px 19px; }
   .footer-inner { flex-wrap: wrap; }
@@ -300,6 +304,60 @@ button, input { font: inherit; }
   .form-grid { grid-template-columns: 1fr; }
   .field--full { grid-column: auto; }
   .footer-inner p { order: 3; width: 100%; }
+}
+
+/* Readability pass: lift supporting text throughout the page. */
+.main-nav a, .back-top { font-size: 13px; }
+.button { font-size: 13px; }
+.button--small { font-size: 11px; }
+.eyebrow { font-size: 11px; }
+.hero-support { font-size: 14px; }
+.event-meta span, .registration-details span { font-size: 13px; }
+.countdown-kicker { font-size: 11px; }
+.countdown-label { font-size: 10px; }
+.countdown-caption { font-size: 12px; }
+.timezone-note { font-size: 10px; }
+.section-heading p:not(.eyebrow) { font-size: 16px; }
+.info-card h3 { font-size: 17px; }
+.info-card p { font-size: 13px; }
+.benefits-intro > p:not(.eyebrow) { font-size: 15px; }
+.text-link { font-size: 13px; }
+.benefit-item h3 { font-size: 16px; }
+.benefit-item p { font-size: 13px; }
+.agenda-tag { font-size: 10px; }
+.agenda-card li { font-size: 13px; }
+.speaker-highlights li { font-size: 15px; }
+.organizer-copy p:not(.eyebrow) { font-size: 14px; }
+.registration-copy > p:not(.eyebrow) { font-size: 16px; }
+.form-step { font-size: 10px; }
+.form-heading p { font-size: 12px; }
+.field label { font-size: 13px; }
+.field label .optional { font-size: 11px; }
+.consent-row { font-size: 12px; }
+.policy-placeholder, .demo-note { font-size: 11px; }
+.form-status { font-size: 12px; }
+.footer-inner p, .back-top { font-size: 11px; }
+
+@media (max-width: 720px) {
+  .main-nav a, .back-top { font-size: 12px; }
+  .button--small { font-size: 10px; }
+  .hero-support { font-size: 13px; }
+  .event-meta span, .registration-details span { font-size: 12px; }
+  .section-heading p:not(.eyebrow) { font-size: 14px; }
+  .info-card h3 { font-size: 15px; }
+  .info-card p { font-size: 12px; }
+  .benefits-intro > p:not(.eyebrow) { font-size: 14px; }
+  .benefit-item h3 { font-size: 14px; }
+  .benefit-item p { font-size: 12px; }
+  .agenda-tag { font-size: 9px; }
+  .agenda-card li { font-size: 12px; }
+  .speaker-name { font-size: 21px; }
+  .speaker-role, .speaker-highlights li { font-size: 14px; }
+  .organizer-copy p:not(.eyebrow) { font-size: 13px; }
+  .registration-copy > p:not(.eyebrow) { font-size: 14px; }
+  .form-heading p { font-size: 12px; }
+  .field label { font-size: 12px; }
+  .consent-row { font-size: 11px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
