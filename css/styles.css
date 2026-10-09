@@ -170,7 +170,7 @@ button, input, select, textarea { font: inherit; }
 .form-heading h3 { margin: 9px 0 0; color: var(--navy); font-size: 23px; font-weight: 700; letter-spacing: -.035em; }
 .form-heading p { margin: 8px 0 23px; color: #78849a; font-size: 10px; }
 .form-heading p span, .field label > span:not(.optional) { color: #dc4f55; }
-.registration-countdown { margin: auto 0 0; padding: 28px 18px 14px; border: 1px solid rgba(83,223,242,.45); border-radius: 13px; background: rgba(3,25,77,.48); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
+.registration-countdown { margin: 28px 0 0; padding: 17px 18px 14px; border: 1px solid rgba(83,223,242,.45); border-radius: 13px; background: rgba(3,25,77,.48); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
 .registration-countdown-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #c2d7f7; font-size: 12px; font-weight: 700; }
 .registration-countdown-heading span:first-child { color: #66e5f3; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
 .registration-countdown-values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 11px; }
