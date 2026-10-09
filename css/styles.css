@@ -119,16 +119,8 @@ button, input, select, textarea { font: inherit; }
 .section-heading--inverse h2 { color: #fff; }
 .section-heading--inverse h2 span { color: var(--cyan); }
 .section-heading--inverse p:not(.eyebrow) { color: #afc0dd; }
-.agenda-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.agenda-card { min-height: 360px; padding: clamp(25px, 4vw, 38px); border: 1px solid rgba(255,255,255,.15); border-radius: 18px; background: rgba(255,255,255,.055); }
-.agenda-card--featured { border-color: rgba(65,222,242,.56); background: linear-gradient(145deg, rgba(4,128,226,.32), rgba(255,255,255,.055)); }
-.agenda-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.agenda-number { color: #8db4fc; font-size: 28px; font-weight: 700; letter-spacing: -.06em; }
-.agenda-tag { padding: 8px 11px; border: 1px solid rgba(255,255,255,.14); border-radius: 100px; color: #b8c9e7; font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.agenda-card h3 { max-width: 470px; margin: 24px 0 23px; color: #fff; font-size: 20px; font-weight: 700; letter-spacing: -.025em; line-height: 1.45; }
-.agenda-card ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
-.agenda-card li { display: grid; grid-template-columns: minmax(110px, .48fr) 1fr; gap: 15px; padding: 13px 0; border-top: 1px solid rgba(255,255,255,.12); color: #bdcbe2; font-size: 11px; line-height: 1.6; }
-.agenda-card li span { color: #fff; font-weight: 700; }
+.agenda-image { position: relative; z-index: 1; width: 100%; max-width: 1160px; margin: 0 auto; }
+.agenda-image img { width: 100%; height: auto; }
 
 .speaker-layout { display: grid; grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr); gap: clamp(35px, 6vw, 75px); align-items: center; max-width: 1160px; padding: clamp(28px, 5vw, 58px); border: 1px solid rgba(83,223,242,.4); border-radius: 26px; color: #fff; background: radial-gradient(ellipse at 90% 10%, rgba(24,133,255,.4), transparent 42%), linear-gradient(130deg, #05276f, #0755c5); box-shadow: 0 24px 70px rgba(7,45,117,.18); }
 .speaker-visual { position: relative; max-width: 390px; width: 100%; aspect-ratio: .88; min-height: 0; }
@@ -255,10 +247,6 @@ button, input, select, textarea { font: inherit; }
   .benefit-item { grid-template-columns: 32px 1fr 25px; gap: 10px; padding: 18px 0; }
   .benefit-item h3 { font-size: 12px; }
   .benefit-item p { font-size: 10px; }
-  .agenda-grid { grid-template-columns: 1fr; gap: 14px; }
-  .agenda-card { min-height: 0; padding: 24px 21px; }
-  .agenda-card h3 { margin: 19px 0; font-size: 18px; }
-  .agenda-card li { grid-template-columns: minmax(100px, .46fr) 1fr; font-size: 10px; }
   .speaker-layout { grid-template-columns: 1fr; gap: 30px; padding: 25px 20px; border-radius: 20px; }
   .speaker-visual { max-width: 360px; min-height: 0; aspect-ratio: .88; margin-inline: auto; }
   .speaker-portrait { right: 27px; width: calc(100% - 27px); }
@@ -300,8 +288,6 @@ button, input, select, textarea { font: inherit; }
   .info-card h3 { margin: 0; padding-right: 35px; }
   .info-card p { grid-column: 2; margin-top: 5px; }
   .card-index { top: 18px; right: 15px; }
-  .agenda-tag { font-size: 8px; }
-  .agenda-card li { grid-template-columns: 1fr; gap: 3px; }
   .form-grid { grid-template-columns: 1fr; }
   .field--full { grid-column: auto; }
   .footer-inner p { order: 3; width: 100%; }
@@ -325,8 +311,6 @@ button, input, select, textarea { font: inherit; }
 .text-link { font-size: 13px; }
 .benefit-item h3 { font-size: 16px; }
 .benefit-item p { font-size: 13px; }
-.agenda-tag { font-size: 10px; }
-.agenda-card li { font-size: 13px; }
 .speaker-highlights li { font-size: 15px; }
 .organizer-copy p:not(.eyebrow) { font-size: 14px; }
 .registration-copy > p:not(.eyebrow) { font-size: 16px; }
@@ -350,8 +334,6 @@ button, input, select, textarea { font: inherit; }
   .benefits-intro > p:not(.eyebrow) { font-size: 14px; }
   .benefit-item h3 { font-size: 14px; }
   .benefit-item p { font-size: 12px; }
-  .agenda-tag { font-size: 9px; }
-  .agenda-card li { font-size: 12px; }
   .speaker-name { font-size: 21px; }
   .speaker-role, .speaker-highlights li { font-size: 14px; }
   .organizer-copy p:not(.eyebrow) { font-size: 13px; }
