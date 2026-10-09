@@ -23,7 +23,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 body { margin: 0; color: var(--ink); background: var(--surface); font-family: var(--font); -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-button, input { font: inherit; }
+button, input, select, textarea { font: inherit; }
 .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
 .skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 16px; color: #fff; background: var(--navy); border-radius: 8px; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
@@ -159,8 +159,8 @@ button, input { font: inherit; }
 .organizer-symbol i:nth-of-type(1) { top: 4px; left: 39px; }.organizer-symbol i:nth-of-type(2) { bottom: 17px; left: 12px; }.organizer-symbol i:nth-of-type(3) { right: 10px; bottom: 22px; }
 
 .section--registration { color: #fff; background: radial-gradient(ellipse at 12% 100%, rgba(0,184,255,.24), transparent 42%), linear-gradient(125deg, #04194d, #0755c5); }
-.registration-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(430px, 1.1fr); gap: clamp(45px, 8vw, 110px); align-items: start; }
-.registration-copy { padding-top: 26px; }
+.registration-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(430px, 1.1fr); gap: clamp(45px, 8vw, 110px); align-items: stretch; }
+.registration-copy { display: flex; flex-direction: column; padding-top: 26px; }
 .registration-copy h2 { max-width: 480px; color: #fff; font-size: clamp(34px, 4.6vw, 52px); }
 .registration-copy > p:not(.eyebrow) { max-width: 480px; margin: 20px 0 0; color: #b8c8e3; font-size: 13px; line-height: 1.8; }
 .registration-details { display: grid; gap: 17px; margin-top: 32px; }
@@ -170,7 +170,7 @@ button, input { font: inherit; }
 .form-heading h3 { margin: 9px 0 0; color: var(--navy); font-size: 23px; font-weight: 700; letter-spacing: -.035em; }
 .form-heading p { margin: 8px 0 23px; color: #78849a; font-size: 10px; }
 .form-heading p span, .field label > span:not(.optional) { color: #dc4f55; }
-.registration-countdown { margin: 28px 0 0; padding: 17px 18px 14px; border: 1px solid rgba(83,223,242,.45); border-radius: 13px; background: rgba(3,25,77,.48); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
+.registration-countdown { margin: auto 0 0; padding: 28px 18px 14px; border: 1px solid rgba(83,223,242,.45); border-radius: 13px; background: rgba(3,25,77,.48); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
 .registration-countdown-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #c2d7f7; font-size: 12px; font-weight: 700; }
 .registration-countdown-heading span:first-child { color: #66e5f3; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
 .registration-countdown-values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 11px; }
@@ -183,10 +183,11 @@ button, input { font: inherit; }
 .field--full { grid-column: 1 / -1; }
 .field label { display: block; margin-bottom: 7px; color: #33425b; font-size: 10px; font-weight: 700; }
 .field label .optional { margin-left: 5px; color: #8994a7; font-size: 9px; font-weight: 500; }
-.field input, .field select { width: 100%; min-height: 50px; padding: 0 13px; border: 1px solid #dce4f0; border-radius: 7px; color: var(--ink); background-color: #fbfcfe; font-size: 14px; transition: border-color .18s ease, box-shadow .18s ease; }
+.field input, .field select, .field textarea { width: 100%; min-height: 50px; padding: 0 13px; border: 1px solid #dce4f0; border-radius: 7px; color: var(--ink); background-color: #fbfcfe; font-size: 14px; transition: border-color .18s ease, box-shadow .18s ease; }
 .field select { padding-right: 38px; }
-.field input::placeholder { color: #a7b0bf; }
-.field input:focus, .field select:focus { border-color: #5b91ed; outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.11); }
+.field textarea { min-height: 118px; padding: 12px 13px; line-height: 1.55; resize: vertical; }
+.field input::placeholder, .field textarea::placeholder { color: #a7b0bf; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #5b91ed; outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.11); }
 .field input[aria-invalid="true"] { border-color: #cf4453; background: #fffafb; }
 .consent-row { position: relative; display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; margin-top: 18px; color: #5d6a7e; font-size: 10px; line-height: 1.7; cursor: pointer; }
 .consent-row input { position: absolute; top: 2px; left: 1px; z-index: 1; width: 16px; height: 16px; margin: 0; opacity: 0; cursor: pointer; }
