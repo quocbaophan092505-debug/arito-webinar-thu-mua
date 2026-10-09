@@ -16,7 +16,8 @@ landing page thu mua/
 ├── js/
 │   └── main.js
 ├── images/
-│   └── arito-logo.png
+│   ├── arito-logo.png
+│   └── diễn giả.png
 └── README.md
 ```
 
@@ -24,7 +25,6 @@ landing page thu mua/
 
 - Form có kiểm tra dữ liệu phía trình duyệt nhưng chưa gửi hoặc lưu thông tin. Khi submit hợp lệ, trang sẽ hiển thị rõ trạng thái chưa kết nối hệ thống.
 - Có sẵn vùng trạng thái thành công và liên kết nhóm Zalo để nối vào sau khi backend xác nhận lưu đăng ký.
-- Ảnh chân dung diễn giả đang là placeholder; cần thay bằng ảnh được duyệt.
 - URL chính sách bảo mật chưa được cung cấp nên hiện có ghi chú placeholder.
 - Font Montserrat tải từ Google Fonts; nếu không có mạng, trang dùng font dự phòng hệ thống.
 
